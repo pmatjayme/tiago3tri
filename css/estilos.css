@@ -2,13 +2,14 @@
   --cinza: #aaa;
   --vermelha: #e93d50;
   --vermelha-escura: #af303f;
-  --branca: #fff;
-  --luz: rgb(229, 255, 0);
+  --branca: #FFFFFF;
+  --luz: rgb(21, 129, 7);
+  --preto: #000000;
 }
 
 body {
   align-items: center;
-  background: linear-gradient(45deg, #a7cfdf 0%,#23538a 100%);
+  background: var(--preto);
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -33,10 +34,10 @@ h1 {
 }
 
 .tecla {
-  background-color: var(--branca);
+  background-color: var(--preto);
   border-radius: 30px;
   box-shadow: 3px 3px 0 var(--cinza);
-  color: var(--vermelha);
+  color: var(--branca);
   cursor: pointer;
   height: 120px;
   font-size: 1.75em;
@@ -58,10 +59,35 @@ h1 {
 .tecla.focus,
 .tecla:focus {
   outline: none;
-  box-shadow: 1px 1px 10px var(--luz);
+  box-shadow: 5px 5px 5px 5px var(--luz);
 }
 
 .tecla.active:focus,
 .tecla:active:focus {
-  box-shadow: 3px 3px 0 var(--vermelha-escura) inset, 1px 1px 10px var(--luz);
+  box-shadow: 3px 3px 0 var(--vermelha-escura) inset;
+  color: var(--preto);
+}
+
+.titulo{
+  font-family: 'Dancing Script', cursive;
+  font-size: 6em;
+  padding: 0.5em 0 0.3em 0;
+}
+
+.rodape{
+  height: 100%;
+  width: 100%;
+  padding: 5em 0 0 0;
+  color: var(--branca);
+}
+
+.tiago{
+  border-radius: 20px;
+  width: 180px;
+  height: 101px;
+}
+
+.by{
+  text-align: right;
+  margin-right: 1em;
 }
