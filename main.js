@@ -40,5 +40,13 @@ document.querySelector('.tecla_tic').onclick = tocaSomTic;
 
 function tocaSomTom(){
     document.querySelector('#som_tecla_tom').play();
+    document.querySelector('#som_tecla_pom').pause();
+    document.querySelector('#som_tecla_clap').pause();
+    document.querySelector('#som_tecla_tim').pause()
+    document.querySelector('#som_tecla_puff').pause();
+    document.querySelector('#som_tecla_splash').pause();
+    document.querySelector('#som_tecla_toim').pause();
+    document.querySelector('#som_tecla_psh').pause();
+    document.querySelector('#som_tecla_tic').pause();
 }
 document.querySelector('.tecla_tom').onclick = tocaSomTom;
