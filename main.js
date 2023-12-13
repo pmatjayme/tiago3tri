@@ -38,6 +38,21 @@ function tocaSomTic(){
 }
 document.querySelector('.tecla_tic').onclick = tocaSomTic;
 
+function tocaSomT(){
+    document.querySelector('#som_tecla_t').play();
+}
+document.querySelector('.tecla_t').onclick = tocaSomT;
+
+function tocaSomI(){
+    document.querySelector('#som_tecla_i').play();
+}
+document.querySelector('.tecla_i').onclick = tocaSomI;
+
+function tocaSomC(){
+    document.querySelector('#som_tecla_c').play();
+}
+document.querySelector('.tecla_c').onclick = tocaSomC;
+
 function tocaSomTom(){
     document.querySelector('#som_tecla_tom').play();
     document.querySelector('#som_tecla_pom').pause();
@@ -48,5 +63,8 @@ function tocaSomTom(){
     document.querySelector('#som_tecla_toim').pause();
     document.querySelector('#som_tecla_psh').pause();
     document.querySelector('#som_tecla_tic').pause();
+    document.querySelector('#som_tecla_t').pause();
+    document.querySelector('#som_tecla_i').pause();
+    document.querySelector('#som_tecla_c').pause();
 }
 document.querySelector('.tecla_tom').onclick = tocaSomTom;
