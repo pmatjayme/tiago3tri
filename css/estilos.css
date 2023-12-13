@@ -1,10 +1,9 @@
 :root {
-  --cinza: #aaa;
-  --vermelha: #e93d50;
-  --vermelha-escura: #af303f;
+  --verde: #45f500;
   --branca: #FFFFFF;
-  --luz: rgb(21, 129, 7);
+  --luz: rgb(135, 120, 141);
   --preto: #000000;
+  --rosa: #F85B72;
 }
 
 body {
@@ -24,19 +23,19 @@ h1 {
 }
 
 .teclado {
-  background: linear-gradient(to bottom, #eeeeee 0%,#cccccc 100%);
-  box-shadow: 6px 8px 0 6px #666, 10px 10px 10px #000;
+  background: var(--branca);
+  box-shadow: 5px 5px 5px 5px #ffffff, 10px 10px 10px #000000;
   border-radius: 30px;
   display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  grid-template-columns: repeat(4, 1fr);
   padding: 10px;
 }
 
 .tecla {
   background-color: var(--preto);
   border-radius: 30px;
-  box-shadow: 3px 3px 0 var(--cinza);
+  box-shadow: 3px 3px 0 var(--verde);
   color: var(--branca);
   cursor: pointer;
   height: 120px;
@@ -49,9 +48,9 @@ h1 {
 
 .tecla.ativa,
 .tecla:active {
-  background-color: var(--vermelha);
-  border: 4px solid  var(--vermelha);
-  box-shadow: 3px 3px 0 var(--vermelha-escura) inset;
+  background-color: var(--branca);
+  border: 4px solid  var(--rosa);
+  box-shadow: 3px 3px 0 var(--rosa) inset;
   color: var(--branca);
   outline: none;
 }
@@ -72,6 +71,7 @@ h1 {
   font-family: 'Dancing Script', cursive;
   font-size: 6em;
   padding: 0.5em 0 0.3em 0;
+  color: var(--verde);
 }
 
 .rodape{
@@ -90,4 +90,5 @@ h1 {
 .by{
   text-align: right;
   margin-right: 1em;
+  color: var(--verde);
 }
