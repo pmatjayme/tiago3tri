@@ -1,57 +1,35 @@
-function tocaSomPom(){
-    document.querySelector('#som_tecla_pom').play();
-}
-document.querySelector('.tecla_pom').onclick = tocaSomPom;
+function tocaSom (seletorAudio){
+    const elemento = document.querySelector(seletorAudio);
 
-function tocaSomClap(){
-    document.querySelector('#som_tecla_clap').play();
+    if(elemento != null && elemento.localName === 'audio'){
+        elemento.play();
+    }
+    else{
+        alert('Non Ecziste');
+    }
 }
-document.querySelector('.tecla_clap').onclick = tocaSomClap;
 
-function tocaSomTim(){
-    document.querySelector('#som_tecla_tim').play();
-}
-document.querySelector('.tecla_tim').onclick = tocaSomTim;
+const listaDeTeclas = document.querySelectorAll('.tecla');
 
-function tocaSomPuff(){
-    document.querySelector('#som_tecla_puff').play();
-}
-document.querySelector('.tecla_puff').onclick = tocaSomPuff;
+for (let contador = 0; contador<listaDeTeclas.length; contador++){
+    const tecla = listaDeTeclas[contador];
+    const instrumento = tecla.classList[1];
+    const idAudio = `#som_${instrumento}`;
 
-function tocaSomSplash(){
-    document.querySelector('#som_tecla_splash').play();
-}
-document.querySelector('.tecla_splash').onclick = tocaSomSplash;
+    tecla.onclick = function(){
+        tocaSom(idAudio);
+    }
 
-function tocaSomToim(){
-    document.querySelector('#som_tecla_toim').play();
-}
-document.querySelector('.tecla_toim').onclick = tocaSomToim;
+    tecla.onkeydown = function(evento){
+        if(evento.code === 'Space' || evento.code === 'Enter'){
+            tecla.classList.add('ativa');
+        }
+    }
 
-function tocaSomPsh(){
-    document.querySelector('#som_tecla_psh').play();
+    tecla.onkeyup = function(){
+        tecla.classList.remove('ativa');
+    }
 }
-document.querySelector('.tecla_psh').onclick = tocaSomPsh;
-
-function tocaSomTic(){
-    document.querySelector('#som_tecla_tic').play();
-}
-document.querySelector('.tecla_tic').onclick = tocaSomTic;
-
-function tocaSomT(){
-    document.querySelector('#som_tecla_t').play();
-}
-document.querySelector('.tecla_t').onclick = tocaSomT;
-
-function tocaSomI(){
-    document.querySelector('#som_tecla_i').play();
-}
-document.querySelector('.tecla_i').onclick = tocaSomI;
-
-function tocaSomC(){
-    document.querySelector('#som_tecla_c').play();
-}
-document.querySelector('.tecla_c').onclick = tocaSomC;
 
 function tocaSomTom(){
     document.querySelector('#som_tecla_tom').play();
